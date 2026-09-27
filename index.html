@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高階經理人教練手冊入口網站｜McKinsey Executive Coaching Briefing Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- McKinsey Deep Navy Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-mark">McK</div>
+        <div>
+          <span class="brand-title">高階經理人教練手冊入口網站</span>
+          <span class="brand-subtitle">McKinsey Executive Coaching &amp; Leadership Briefing Portal</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#reconciliation-section" class="nav-link">三源比較修正</a>
+        <a href="#diagnostic-section" class="nav-link">五問組織診斷</a>
+        <a href="#book01-showcase" class="nav-link">Book #01 核心架構</a>
+        <a href="#catalog-section" class="nav-link">30本教材書庫</a>
+        <a href="book-coaching-for-performance.html" class="nav-cta">進入《高績效教練》20頁簡報 →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- McKinsey Executive Hero & Global Search -->
+  <section class="hero-banner">
+    <div class="hero-container">
+      <div class="mck-kicker">EXECUTIVE LEADERSHIP PLAYBOOK SERIES · MCKINSEY BRIEFING FORMAT</div>
+      <h1 class="hero-title">
+        從「給答案的救火主管」升級為「激發潛能與責任感的教練型高管」
+      </h1>
+      <p class="hero-subtitle">
+        本入口網站採用<strong>麥肯錫（McKinsey &amp; Company）金字塔原理行動結論標題、視覺化圖表（Exhibits）與結構化表格</strong>設計，支援跨數十本經典管理著作之全域關鍵字檢索。首冊完整整合《高績效教練（原書第5版）》三份核心文獻（廣行解讀 ＋ 原書280頁PDF含圖表還原 ＋ 23章逐章分析與行動方案）。
+      </p>
+
+      <!-- Global Search Box -->
+      <div class="search-panel">
+        <div style="font-size:0.75rem;font-weight:700;color:var(--mck-blue);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.45rem;">
+          GLOBAL KNOWLEDGE &amp; SLIDE SEARCH · 跨書目／章節／案例／KPI 全域關鍵字檢索
+        </div>
+        <div class="search-input-row">
+          <input
+            type="text"
+            id="global-search-input"
+            class="search-input"
+            placeholder="輸入關鍵字搜尋簡報頁（例如：GROW、蘇與莫、上海專案、彼得找梯子、績效曲線、Level E、800% ROI、帶人要慢、次人格）..."
+          />
+          <button type="button" id="clear-search-btn" class="search-btn">清除重設</button>
+        </div>
+        <div class="hot-tags-row">
+          <span class="hot-tag-label">熱門檢索詞：</span>
+          <button type="button" class="hot-tag" data-search-tag="三源整合">三源整合比較</button>
+          <button type="button" class="hot-tag" data-search-tag="同心圓">六層同心圓結構</button>
+          <button type="button" class="hot-tag" data-search-tag="績效曲線">績效曲線四階段(圖2表2)</button>
+          <button type="button" class="hot-tag" data-search-tag="蘇與莫">蘇與莫在職教練</button>
+          <button type="button" class="hot-tag" data-search-tag="彼得找梯子">彼得找梯子＆喬治娜</button>
+          <button type="button" class="hot-tag" data-search-tag="上海專案">上海專案小張與小王</button>
+          <button type="button" class="hot-tag" data-search-tag="林戴維斯">跳遠冠軍林·戴維斯</button>
+          <button type="button" class="hot-tag" data-search-tag="Level E">Level E 回饋三問</button>
+          <button type="button" class="hot-tag" data-search-tag="800% ROI">800% ROI 營運經理肯</button>
+          <button type="button" class="hot-tag" data-search-tag="帶人要慢">帶人要慢 vs 測市場要快</button>
+          <button type="button" class="hot-tag" data-search-tag="次人格">次人格與叫醒牆</button>
+        </div>
+        <div id="global-search-results" class="search-results-box"></div>
+      </div>
+
+      <!-- Key Metrics Bar -->
+      <div class="hero-metrics-bar">
+        <div class="hero-metric-item">
+          <div class="hero-metric-num">3 份文獻整合</div>
+          <div class="hero-metric-label">廣行解讀 ＋ 原書第5版PDF ＋ 23章逐章分析與行動方案</div>
+        </div>
+        <div class="hero-metric-item">
+          <div class="hero-metric-num">20 頁麥肯錫簡報</div>
+          <div class="hero-metric-label">每頁皆配置專屬 SVG 顧問視覺圖表 ＋ 結構化對照表</div>
+        </div>
+        <div class="hero-metric-item">
+          <div class="hero-metric-num">100% 補齊缺口</div>
+          <div class="hero-metric-label">以原書 PDF 影像完整還原 P.52-53 績效曲線表2與 P.71 圖6</div>
+        </div>
+        <div class="hero-metric-item">
+          <div class="hero-metric-num">800% 平均 ROI</div>
+          <div class="hero-metric-label">PCI 實證投資回報率｜營運經理肯單案創造 £78,000 淨效益</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-container">
+
+    <!-- Section 1: Three-Source Comparison & Reconciliation -->
+    <section id="reconciliation-section" class="mck-section">
+      <div class="mck-section-header">
+        <div>
+          <div class="mck-section-kicker">EXHIBIT A · THREE-SOURCE RECONCILIATION MATRIX</div>
+          <h2 class="mck-section-title">《高績效教練》三份核心檔案整理、比較與互補修正總表</h2>
+        </div>
+        <a href="book-coaching-for-performance.html#slide-1" class="mck-btn mck-btn-primary">
+          查看簡報第 1–2 頁完整圖解 →
+        </a>
+      </div>
+
+      <div class="slide-body" style="padding:0;margin-bottom:1.25rem;">
+        <!-- Left Visual Diagram: 3-Source Convergence & Concentric Circles -->
+        <div class="exhibit-box">
+          <div class="exhibit-header">
+            <span class="exhibit-label">VISUAL EXHIBIT A1 · 三源匯流與全書六層同心圓模型</span>
+            <div class="exhibit-title">消除單一文件盲點：以原書 PDF 圖表補齊《逐章分析》缺口 1，並融入 23 章 KPI 與雙案例庫</div>
+          </div>
+          <div class="svg-chart-wrapper">
+            <svg viewBox="0 0 680 310" xmlns="http://www.w3.org/2000/svg">
+              <rect width="680" height="310" fill="#FFFFFF" />
+              <!-- Left: 3 Sources -->
+              <rect x="16" y="22" width="210" height="74" fill="#051C2C" rx="2" />
+              <text x="28" y="45" fill="#00A9F4" font-size="11" font-weight="bold">SOURCE A · 廣行解讀.md</text>
+              <text x="28" y="64" fill="#FFFFFF" font-size="12" font-weight="bold">本土實戰與對話故事破題</text>
+              <text x="28" y="82" fill="#CBD5E1" font-size="10.5">空容器vs橡樹種子｜上海專案小張小王</text>
+
+              <rect x="16" y="116" width="210" height="74" fill="#0A2540" rx="2" />
+              <text x="28" y="139" fill="#00A9F4" font-size="11" font-weight="bold">SOURCE B · 原書第5版.pdf (280頁)</text>
+              <text x="28" y="158" fill="#FFFFFF" font-size="12" font-weight="bold">權威理論＋原書圖像表2＋附錄題庫</text>
+              <text x="28" y="176" fill="#CBD5E1" font-size="10.5">100%還原P.52績效曲線表2與PCI七大題庫</text>
+
+              <rect x="16" y="210" width="210" height="78" fill="#2251FF" rx="2" />
+              <text x="28" y="233" fill="#FFFFFF" font-size="11" font-weight="bold">SOURCE C · 逐章分析與行動方案.md</text>
+              <text x="28" y="252" fill="#FFFFFF" font-size="12" font-weight="bold">23章洞察＋週/月/季行動＋量化KPI</text>
+              <text x="28" y="270" fill="#E2E8F0" font-size="10.5">蘇與莫/彼得/山姆/肯｜帶人慢vs測市場快</text>
+
+              <!-- Arrows to Right Concentric Circles -->
+              <path d="M226 59 L315 135" stroke="#051C2C" stroke-width="2.2" marker-end="url(#arrowMck)" />
+              <path d="M226 153 L315 153" stroke="#00A9F4" stroke-width="2.5" marker-end="url(#arrowMck)" />
+              <path d="M226 249 L315 172" stroke="#2251FF" stroke-width="2.5" marker-end="url(#arrowMck)" />
+
+              <defs>
+                <marker id="arrowMck" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#2251FF" />
+                </marker>
+              </defs>
+
+              <!-- Right: 6-Layer Concentric Circle Architecture -->
+              <circle cx="495" cy="155" r="132" fill="#F0F4FF" stroke="#CBD5E1" stroke-width="1.5" />
+              <circle cx="495" cy="155" r="108" fill="#E0EAFF" stroke="#93C5FD" stroke-width="1.5" />
+              <circle cx="495" cy="155" r="84" fill="#BAE6FD" stroke="#38BDF8" stroke-width="1.5" />
+              <circle cx="495" cy="155" r="60" fill="#2251FF" />
+              <circle cx="495" cy="155" r="35" fill="#051C2C" />
+
+              <text x="495" y="151" text-anchor="middle" fill="#00A9F4" font-size="10" font-weight="bold">Ch 6 圓心</text>
+              <text x="495" y="166" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="bold">覺察×責任</text>
+              <text x="495" y="110" text-anchor="middle" fill="#FFFFFF" font-size="10" font-weight="bold">Ch7-8 提問與傾聽</text>
+              <text x="495" y="83" text-anchor="middle" fill="#051C2C" font-size="10" font-weight="bold">Ch9-13 GROW 四步結構</text>
+              <text x="495" y="59" text-anchor="middle" fill="#051C2C" font-size="9.5" font-weight="bold">Ch15-20 四大場景＋800% ROI＋文化</text>
+              <text x="495" y="36" text-anchor="middle" fill="#1E3A8A" font-size="9.5" font-weight="bold">Ch21-23 不刻意嘗試·次人格·叫醒牆</text>
+              <text x="495" y="299" text-anchor="middle" fill="#051C2C" font-size="10.5" font-weight="bold">地基（Ch 1–5）：從空容器到橡樹種子｜P = p - i</text>
+            </svg>
+          </div>
+          <div class="exhibit-caption">
+            <strong>關鍵修正價值：</strong>《逐章分析與行動方案.md》於文末「缺口 1」指出因純文字擷取而缺少原書圖 2、表 2 與圖 6；我們已透過《原書第5版.pdf》頁面影像 <strong>100% 完整還原</strong>，並將其 23 章行動與 KPI 全面嵌入簡報。
+          </div>
+        </div>
+
+        <!-- Right Table: 3-Source Comparison -->
+        <div class="exhibit-box navy-top">
+          <div class="exhibit-header">
+            <span class="exhibit-label">STRUCTURED TABLE A2 · 三份教材來源優劣比較與整合策略</span>
+            <div class="exhibit-title">三源互補：兼具聽書故事性、原著圖表權威性與創業顧問之可量化落地性</div>
+          </div>
+          <div class="mck-table-wrap">
+            <table class="mck-table">
+              <thead>
+                <tr>
+                  <th>比較維度</th>
+                  <th>1. 廣行解讀.md</th>
+                  <th>2. 原書第5版.pdf</th>
+                  <th>3. 逐章分析與行動方案.md</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>定位與強項</strong></td>
+                  <td>生動對話故事、本土職場痛點破題</td>
+                  <td>23章完整理論、原書視覺圖表、PCI附錄題庫</td>
+                  <td><strong>資深顧問視角</strong>：逐章洞察＋週/月/季行動＋量化KPI</td>
+                </tr>
+                <tr>
+                  <td><strong>代表案例</strong></td>
+                  <td>滑雪教練教網球、演講緊張、<strong>上海專案小張小王</strong></td>
+                  <td>高威內心博弈、馬斯洛與績效曲線對應、A-W詞彙表</td>
+                  <td><strong>蘇與莫、彼得找梯子、喬治娜、林戴維斯、山姆、米歇爾、愛麗絲與吉姆、肯(£7.8萬)、澳紐銀行</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>原書圖表與缺口互補</strong></td>
+                  <td>無原書圖表與後段章節</td>
+                  <td><strong>補齊缺口1</strong>：提供 P.52-53 績效曲線表2與 P.71 圖6 影像還原</td>
+                  <td>誠實標註「4大把握度缺口」（缺口1圖表已由PDF補齊；缺口3-4提供5問診斷解方）</td>
+                </tr>
+                <tr>
+                  <td><strong>跨書張力與策略高度</strong></td>
+                  <td>聚焦單書前段核心概念</td>
+                  <td>聚焦教練專業體系與超個人心理學</td>
+                  <td>獨創<strong>與《把熱愛變成事業》跨書對照</strong>：「對內帶人要慢 vs. 對外測市場要快」</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Interactive 5-Question Organizational Diagnostic Tool -->
+    <section id="diagnostic-section" class="mck-section">
+      <div class="mck-section-header">
+        <div>
+          <div class="mck-section-kicker">INTERACTIVE DIAGNOSTIC TOOL · 解決「23章90項行動過載」</div>
+          <h2 class="mck-section-title">高階經理人「五問組織現況診斷器」：精準篩選本季最優先 3–5 項行動</h2>
+        </div>
+        <span class="mck-pill pill-blue">依據《逐章分析與行動方案.md》缺口 3 &amp; 缺口 4 設計</span>
+      </div>
+
+      <p style="font-size:0.9rem;color:var(--mck-text-secondary);margin-bottom:1.1rem;">
+        《逐章分析與行動方案.md》指出：全書 23 章共包含近 90 個行動項目，若同時啟動必導致消化不良。請根據您目前的團隊現況選擇以下 5 個問題，系統將即時為您匹配<strong>本季最具槓桿效益的優先行動與 KPI</strong>：
+      </p>
+
+      <div class="diag-grid">
+        <div class="diag-card">
+          <div class="diag-q-num">QUESTION 01 · 團隊規模與層級</div>
+          <div class="diag-q-title">1. 您目前帶領的團隊規模與架構？</div>
+          <select id="diag-q1" class="diag-select">
+            <option value="small">10人以下扁平團隊（直接帶一線員工）</option>
+            <option value="layered">20人以上多層級組織（需透過中階主管帶人）</option>
+          </select>
+        </div>
+        <div class="diag-card">
+          <div class="diag-q-num">QUESTION 02 · 救火時間佔比</div>
+          <div class="diag-q-title">2. 每週花在「替部屬救火/給答案」的時間？</div>
+          <select id="diag-q2" class="diag-select">
+            <option value="high">高於 40%（部屬事事請示、我不盯就出錯）</option>
+            <option value="low">低於 30%（日常運轉順暢，但缺乏破框創新）</option>
+          </select>
+        </div>
+        <div class="diag-card">
+          <div class="diag-q-num">QUESTION 03 · 績效曲線階段</div>
+          <div class="diag-q-title">3. 團隊目前處於績效曲線哪一階段？</div>
+          <select id="diag-q3" class="diag-select">
+            <option value="dependent">階段 2：依賴他人（等指令、怕犯錯、推卸責任）</option>
+            <option value="independent">階段 3：獨立自主（明星員工單打獨鬥、跨部門卡關）</option>
+          </select>
+        </div>
+        <div class="diag-card">
+          <div class="diag-q-num">QUESTION 04 · 目標與流程制度</div>
+          <div class="diag-q-title">4. 目前最迫切的績效與營運痛點？</div>
+          <select id="diag-q4" class="diag-select">
+            <option value="result-only">只盯最終業績數字，員工壓力大且承諾常跳票</option>
+            <option value="lean-safety">流程改善與安全合規流於口號（「盡快、我必須」）</option>
+          </select>
+        </div>
+        <div class="diag-card">
+          <div class="diag-q-num">QUESTION 05 · 領導者個人狀態</div>
+          <div class="diag-q-title">5. 您個人的情緒與能量狀態？</div>
+          <select id="diag-q5" class="diag-select">
+            <option value="burnout">常感焦慮易怒，或事業達標卻有「叫醒牆」空虛感</option>
+            <option value="steady">個人狀態穩定，專注於建立組織文化與 ROI</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="diag-result-output" class="diag-output"></div>
+    </section>
+
+    <!-- Section 3: Book 01 Highlight Preview -->
+    <section id="book01-showcase" class="mck-section">
+      <div class="mck-section-header">
+        <div>
+          <div class="mck-section-kicker">BOOK #01 · COACHING FOR PERFORMANCE (5TH EDITION)</div>
+          <h2 class="mck-section-title">第一冊核心教材：《高績效教練》20 頁麥肯錫簡報結構預覽</h2>
+        </div>
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+          <a href="高績效教練/《高績效教練》重點摘要、亮點分析與高階經理人教戰手冊.md" class="mck-btn">下載 Markdown 完整教戰手冊</a>
+          <a href="book-coaching-for-performance.html" class="mck-btn mck-btn-primary">開啟 20 頁完整圖表簡報 →</a>
+        </div>
+      </div>
+
+      <div class="mck-table-wrap">
+        <table class="mck-table">
+          <thead>
+            <tr>
+              <th style="width:95px;">簡報頁碼</th>
+              <th style="width:165px;">對應章節／模組</th>
+              <th>麥肯錫金字塔行動結論標題（Action Title）</th>
+              <th style="width:240px;">該頁配置之視覺圖表 ＋ 結構化表格</th>
+              <th style="width:95px;">直達連結</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Slide 01</strong></td>
+              <td>三源比較與執行摘要</td>
+              <td>整合三份核心文獻並 100% 補齊原書圖表缺口，將教練領導力轉化為可產生 800% ROI 的經營系統</td>
+              <td>三源匯流架構圖 ＋ 三份檔案優劣互補對照表</td>
+              <td><a href="book-coaching-for-performance.html#slide-1">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 02</strong></td>
+              <td>全書六層同心圓</td>
+              <td>《高績效教練》全書 23 章並非零散技巧，而是以「覺察與責任」為圓心向外擴張的六層同心圓系統</td>
+              <td>六層同心圓 SVG 架構圖 ＋ 五大部分 23 章導覽表</td>
+              <td><a href="book-coaching-for-performance.html#slide-2">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 03</strong></td>
+              <td>Ch 1 &amp; Ch 5 典範轉移</td>
+              <td>員工平均僅發揮 40% 潛能：高管必須將部屬從「空容器」改視為「橡樹種子」，戒除專家給答案癮</td>
+              <td>空容器 vs 橡樹種子對比圖 ＋ 傳統管理 vs 教練管理表</td>
+              <td><a href="book-coaching-for-performance.html#slide-3">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 04</strong></td>
+              <td>Ch 2 內心博弈公式</td>
+              <td>添·高威內心博弈公式（P = p - i）：消除恐懼與微觀管理干擾，比灌輸技術更能瞬間釋放潛能</td>
+              <td>P = p - i 滑雪教練教網球圖 ＋ 內外干擾源清除對策表</td>
+              <td><a href="book-coaching-for-performance.html#slide-4">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 05</strong></td>
+              <td>Ch 3 績效曲線四階段</td>
+              <td>原書 P.52-53 圖 2 與表 2 完整還原：超越「獨立自主」的個人英雄主義，邁向「相互依賴」共創高績效</td>
+              <td>績效曲線 S 型四階段圖 ＋ 原書表 2 四階段完整矩陣</td>
+              <td><a href="book-coaching-for-performance.html#slide-5">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 06</strong></td>
+              <td>Ch 4 在職教練本質</td>
+              <td>「蘇與莫（Sue &amp; Mo）」在職教練案例：教練不是開車載部屬去目的地，而是邊走邊把車鑰匙交出去</td>
+              <td>原書 P.71 教練型領導力三角圖 ＋ 蘇與莫四步提問拆解表</td>
+              <td><a href="book-coaching-for-performance.html#slide-6">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 07</strong></td>
+              <td>Ch 6 覺察與責任內核</td>
+              <td>全書圓心「覺察 × 責任」雙開關：從「彼得找梯子」與「喬治娜備忘錄」看賦予選擇權的治本威力</td>
+              <td>覺察與責任雙開關矩陣圖 ＋ 彼得/喬治娜/演講緊張三案例表</td>
+              <td><a href="book-coaching-for-performance.html#slide-7">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 08</strong></td>
+              <td>Ch 7–8 提問與傾聽</td>
+              <td>兩項對話基本功：以「十大強有力提問原則（禁用為什麼）」搭配「三層傾聽與沉默 3 秒」啟動思考</td>
+              <td>由廣入深提問漏斗與傾聽圖 ＋ 審判式質問 vs 教練式提問表</td>
+              <td><a href="book-coaching-for-performance.html#slide-8">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 09</strong></td>
+              <td>Ch 9 GROW 總覽與案例</td>
+              <td>GROW 四步對話架構與「上海專案小張與小王不出活」實戰：沒有覺察與責任的 GROW 只是偽裝審訊</td>
+              <td>GROW 動態循環架構圖 ＋ 上海專案四階段逆轉對話表</td>
+              <td><a href="book-coaching-for-performance.html#slide-9">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 10</strong></td>
+              <td>Ch 10–11 G 目標與 R 現狀</td>
+              <td>G 目標（跳遠冠軍林·戴維斯啟示）與 R 現狀（山姆硬扛案例）：鎖定 100% 可控表現並區分事實與觀點</td>
+              <td>終極目標 vs 表現目標槓桿圖 ＋ SMART/PURE/CLEAR 與山姆案例表</td>
+              <td><a href="book-coaching-for-performance.html#slide-10">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 11</strong></td>
+              <td>Ch 12–13 O 選擇與 W 意願</td>
+              <td>O 選擇（米歇爾與九點練習）與 W 意願（1-10分測試 ＋ Level E 回饋）：確保行動方案 90% 落地執行</td>
+              <td>九點破框與 Level A–E 回饋階梯圖 ＋ 意願測試與 Level E 三問表</td>
+              <td><a href="book-coaching-for-performance.html#slide-11">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 12</strong></td>
+              <td>Ch 14–15 意義與 1-on-1</td>
+              <td>意義教練（80歲回望練習）與正式一對一教練：以「有意識的工作協議」化解中小企業三重角色衝突</td>
+              <td>發起人/領導者/教練三重角色圖 ＋ 受害者轉創造者與工作協議表</td>
+              <td><a href="book-coaching-for-performance.html#slide-12">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 13</strong></td>
+              <td>Ch 16 團隊發展四階段</td>
+              <td>舒茨（Schutz）團隊發展四階段與九項實踐：帶領團隊跨越「假和諧與內鬥」，進入高績效「共創」</td>
+              <td>包融➔主張➔合作➔共創演進圖 ＋ 各階段卡關症狀與教練處方表</td>
+              <td><a href="book-coaching-for-performance.html#slide-13">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 14</strong></td>
+              <td>Ch 17–18 精實與安全教練</td>
+              <td>精實 PDCA 教練（愛麗絲與吉姆案例）與安全績效教練：消滅模糊詞彙，把「我必須」轉化為「我選擇」</td>
+              <td>PDCA 教練提問環與安全光譜圖 ＋ 愛麗絲與吉姆對話前後對照表</td>
+              <td><a href="book-coaching-for-performance.html#slide-14">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 15</strong></td>
+              <td>Ch 19–20 ROI 與教練文化</td>
+              <td>衡量教練 800% ROI（營運經理肯 £7.8萬案例）與澳紐銀行變革：軟硬體同步轉型並以原則取代規則</td>
+              <td>三步 ROI 衡量瀑布圖 ＋ 交易型變革失敗矩陣與澳紐銀行原則表</td>
+              <td><a href="book-coaching-for-performance.html#slide-15">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 16</strong></td>
+              <td>Ch 21–23 領導者自我修煉</td>
+              <td>領導者的高階內功：「不刻意嘗試（1-10分無批判觀察）」、阿薩吉奧利次人格整合與跨越「叫醒牆」</td>
+              <td>雙軸成長模型與叫醒牆曲線圖 ＋ 不刻意嘗試與次人格整合實踐表</td>
+              <td><a href="book-coaching-for-performance.html#slide-16">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 17</strong></td>
+              <td>附錄 2 七大問題工具箱</td>
+              <td>原書附錄 2「PCI 七大教練問題工具箱」全景速查：從自我教練、請求許可到後續跟進三情境</td>
+              <td>PCI 七大工具調用決策樹圖 ＋ 七大場景黃金提問句型速查表</td>
+              <td><a href="book-coaching-for-performance.html#slide-17">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 18</strong></td>
+              <td>全書 23 章行動與 KPI</td>
+              <td>全書 23 章「本週／本月／本季」落實行動方案與量化成功指標（KPI）全景作戰總表</td>
+              <td>本週/本月/本季三波段影響力圖 ＋ 23 章行動方案與 KPI 總表</td>
+              <td><a href="book-coaching-for-performance.html#slide-18">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 19</strong></td>
+              <td>跨書策略對照矩陣</td>
+              <td>跨書高階決策張力（惠特默 × 凱莉彭）：精準區分「對內帶人要慢」與「對外測市場要快」</td>
+              <td>雙軌速度與專業態度象限圖 ＋ 《高績效教練》vs《把熱愛變成事業》對照表</td>
+              <td><a href="book-coaching-for-performance.html#slide-19">前往 →</a></td>
+            </tr>
+            <tr>
+              <td><strong>Slide 20</strong></td>
+              <td>把握度自檢與 90 天路線</td>
+              <td>四大把握度缺口修正與 90 天落地路線圖：以「五問診斷」破除行動過載，每季鎖定 3–5 項核心習慣</td>
+              <td>90 天三階段轉型甘特路線圖 ＋ 四大把握度缺口修正與五問處方表</td>
+              <td><a href="book-coaching-for-performance.html#slide-20">前往 →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 4: Multi-Book Scalable Catalog -->
+    <section id="catalog-section" class="mck-section">
+      <div class="mck-section-header">
+        <div>
+          <div class="mck-section-kicker">EXECUTIVE COACHING CURRICULUM LIBRARY · 可擴充至 30+ 本簡報教材</div>
+          <h2 class="mck-section-title">高階經理人教練手冊系列書庫（持續擴充架構）</h2>
+        </div>
+      </div>
+      <div id="book-catalog-grid" class="book-grid"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div style="max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <div>
+        <strong style="color:#FFFFFF;">高階經理人教練手冊入口網站｜McKinsey Executive Briefing Edition</strong><br />
+        整合文獻：《高績效教練》廣行解讀 · 約翰·惠特默《高績效教練（原書第5版）》PDF · 《高績效教練_逐章分析與行動方案.md》
+      </div>
+      <div>
+        支援鍵盤 <code>←</code> <code>→</code> 簡報翻頁 · 全域關鍵字檢索 · GitHub Pages 雲端直發
+      </div>
+    </div>
+  </footer>
+
+  <script src="portal-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

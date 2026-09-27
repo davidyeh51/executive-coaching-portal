@@ -1,0 +1,908 @@
+/* ==========================================================================
+   McKinsey & Company Executive Presentation & Portal Design System
+   Palette: Deep Navy (#051C2C), Electric Blue (#2251FF), Cyan (#00A9F4),
+            Crisp White (#FFFFFF), Consulting Slate Gray (#F2F4F8)
+   Format:  Pyramid Principle Action Titles + Exhibit Charts + Consulting Tables
+   ========================================================================== */
+
+:root {
+  --mck-navy: #051C2C;
+  --mck-navy-light: #0F2D44;
+  --mck-navy-dark: #020E17;
+  --mck-blue: #2251FF;
+  --mck-blue-hover: #183EC7;
+  --mck-blue-soft: #EBF0FF;
+  --mck-cyan: #00A9F4;
+  --mck-cyan-soft: #E6F7FF;
+  --mck-teal: #007A87;
+  --mck-amber: #D97706;
+  --mck-amber-soft: #FEF3C7;
+  --mck-red: #C81E1E;
+  --mck-red-soft: #FDE8E8;
+  --mck-green: #047857;
+  --mck-green-soft: #DEF7EC;
+  --mck-bg: #F0F3F7;
+  --mck-surface: #FFFFFF;
+  --mck-surface-alt: #F8FAFC;
+  --mck-border: #CBD5E1;
+  --mck-border-light: #E2E8F0;
+  --mck-text: #051C2C;
+  --mck-text-secondary: #334155;
+  --mck-muted: #64748B;
+  --shadow-slide: 0 12px 32px rgba(5, 28, 44, 0.10), 0 2px 6px rgba(5, 28, 44, 0.06);
+  --shadow-card: 0 4px 16px rgba(5, 28, 44, 0.07);
+  --font-serif: "Georgia", "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--mck-bg);
+  color: var(--mck-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--mck-blue);
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+/* ==========================================================================
+   Top Navigation Bar (McKinsey Deep Navy Header)
+   ========================================================================== */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--mck-navy);
+  color: #FFFFFF;
+  border-bottom: 3px solid var(--mck-blue);
+  box-shadow: 0 4px 18px rgba(5, 28, 44, 0.22);
+}
+
+.nav-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: #FFFFFF;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  background: var(--mck-blue);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  border-left: 3px solid var(--mck-cyan);
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #CBD5E1;
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #FFFFFF;
+  border-bottom-color: var(--mck-cyan);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-cta {
+  background: var(--mck-blue);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  font-size: 0.84rem;
+  padding: 0.48rem 1rem;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-cta:hover {
+  background: var(--mck-blue-hover);
+}
+
+/* ==========================================================================
+   McKinsey Executive Hero Banner
+   ========================================================================== */
+.hero-banner {
+  background: linear-gradient(135deg, var(--mck-navy) 0%, #092C48 65%, #0D385C 100%);
+  color: #FFFFFF;
+  padding: 3.2rem 2rem 2.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 30%, rgba(34, 81, 255, 0.25), transparent 65%),
+              radial-gradient(circle at 90% 80%, rgba(0, 169, 244, 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.mck-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--mck-cyan);
+  margin-bottom: 0.85rem;
+}
+
+.mck-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: var(--mck-cyan);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  max-width: 980px;
+}
+
+.hero-subtitle {
+  font-size: 1.02rem;
+  color: #CBD5E1;
+  max-width: 900px;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.hero-metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.hero-metric-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid var(--mck-cyan);
+  padding: 0.85rem 1.1rem;
+}
+
+.hero-metric-num {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+}
+
+.hero-metric-label {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   Global Search Box (Portal & Slide Deck)
+   ========================================================================== */
+.search-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+  border-top: 3px solid var(--mck-blue);
+  box-shadow: var(--shadow-card);
+  padding: 1.35rem 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.search-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-input {
+  flex: 1;
+  border: 1px solid var(--mck-border);
+  padding: 0.78rem 1.1rem;
+  font-size: 0.96rem;
+  color: var(--mck-text);
+  background: var(--mck-surface-alt);
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+.search-input:focus {
+  border-color: var(--mck-blue);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(34, 81, 255, 0.12);
+}
+
+.search-btn {
+  background: var(--mck-navy);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.78rem 1.35rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: var(--mck-blue);
+}
+
+.hot-tags-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.hot-tag-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--mck-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 0.25rem;
+}
+
+.hot-tag {
+  background: var(--mck-surface-alt);
+  border: 1px solid var(--mck-border);
+  color: var(--mck-text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.26rem 0.68rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.hot-tag:hover {
+  background: var(--mck-blue);
+  color: #FFFFFF;
+  border-color: var(--mck-blue);
+}
+
+.search-results-box {
+  margin-top: 1rem;
+  border-top: 1px solid var(--mck-border-light);
+  padding-top: 1rem;
+  display: none;
+}
+
+.search-results-box.active {
+  display: block;
+}
+
+.search-result-card {
+  display: block;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--mck-border-light);
+  border-left: 4px solid var(--mck-blue);
+  background: var(--mck-surface-alt);
+  margin-bottom: 0.65rem;
+  color: var(--mck-text);
+}
+
+.search-result-card:hover {
+  background: var(--mck-blue-soft);
+  border-color: var(--mck-blue);
+}
+
+.search-highlight {
+  background: #FEF08A;
+  color: var(--mck-navy);
+  padding: 0 3px;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Main Container & McKinsey Section Headers
+   ========================================================================== */
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2.2rem 2rem 4rem;
+}
+
+.mck-section {
+  margin-bottom: 3rem;
+}
+
+.mck-section-header {
+  border-bottom: 2px solid var(--mck-navy);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.mck-section-kicker {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mck-blue);
+  margin-bottom: 0.25rem;
+}
+
+.mck-section-title {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--mck-navy);
+}
+
+/* ==========================================================================
+   McKinsey Presentation Slide Deck Layout (16:9 Consulting Slide Format)
+   ========================================================================== */
+.deck-toolbar {
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+  border-left: 4px solid var(--mck-navy);
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 63px;
+  z-index: 900;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.mck-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+  color: var(--mck-navy);
+  font-size: 0.83rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.mck-btn:hover {
+  border-color: var(--mck-blue);
+  color: var(--mck-blue);
+  background: var(--mck-blue-soft);
+}
+
+.mck-btn.active,
+.mck-btn-primary {
+  background: var(--mck-navy);
+  color: #FFFFFF;
+  border-color: var(--mck-navy);
+}
+
+.mck-btn-primary:hover {
+  background: var(--mck-blue);
+  border-color: var(--mck-blue);
+  color: #FFFFFF;
+}
+
+.deck-workspace {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .deck-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+.slide-index-sidebar {
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+  border-top: 3px solid var(--mck-navy);
+  padding: 1rem;
+  position: sticky;
+  top: 132px;
+  max-height: calc(100vh - 155px);
+  overflow-y: auto;
+  box-shadow: var(--shadow-card);
+}
+
+.sidebar-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mck-muted);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid var(--mck-border-light);
+}
+
+.toc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--mck-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 0.2rem;
+}
+
+.toc-item:hover {
+  background: var(--mck-surface-alt);
+  color: var(--mck-blue);
+}
+
+.toc-item.active {
+  background: var(--mck-blue-soft);
+  color: var(--mck-navy);
+  font-weight: 700;
+  border-left-color: var(--mck-blue);
+}
+
+.toc-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--mck-blue);
+  font-weight: 700;
+  min-width: 22px;
+}
+
+/* ==========================================================================
+   Individual McKinsey Consulting Slide Card
+   ========================================================================== */
+.mck-slide {
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+  border-top: 5px solid var(--mck-navy);
+  box-shadow: var(--shadow-slide);
+  margin-bottom: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.mck-slide.hidden-slide {
+  display: none !important;
+}
+
+/* Slide Top Bar (Tracker + Slide Number) */
+.slide-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 2rem 0.5rem;
+  border-bottom: 1px solid var(--mck-border-light);
+  background: var(--mck-surface-alt);
+}
+
+.slide-tracker {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--mck-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slide-tracker-badge {
+  background: var(--mck-navy);
+  color: #FFFFFF;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+.slide-number {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--mck-muted);
+}
+
+/* McKinsey Action Title (Pyramid Principle Governing Thought) */
+.slide-action-header {
+  padding: 1.25rem 2rem 1rem;
+  border-bottom: 1px solid var(--mck-border-light);
+}
+
+.slide-action-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.22rem, 1.8vw, 1.52rem);
+  font-weight: 700;
+  color: var(--mck-navy);
+  line-height: 1.35;
+  border-left: 4px solid var(--mck-blue);
+  padding-left: 0.9rem;
+}
+
+.slide-action-subtitle {
+  font-size: 0.88rem;
+  color: var(--mck-text-secondary);
+  margin-top: 0.45rem;
+  padding-left: 1.15rem;
+}
+
+/* Slide Body: Two-Column Exhibit + Table Grid */
+.slide-body {
+  padding: 1.4rem 2rem;
+  display: grid;
+  grid-template-columns: 1.02fr 1.08fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.slide-body.single-col {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 960px) {
+  .slide-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Exhibit Box (Left or Right Column) */
+.exhibit-box {
+  background: var(--mck-surface-alt);
+  border: 1px solid var(--mck-border);
+  border-top: 3px solid var(--mck-blue);
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exhibit-box.navy-top {
+  border-top-color: var(--mck-navy);
+}
+
+.exhibit-box.cyan-top {
+  border-top-color: var(--mck-cyan);
+}
+
+.exhibit-header {
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--mck-border-light);
+}
+
+.exhibit-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mck-blue);
+  display: block;
+}
+
+.exhibit-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--mck-navy);
+  margin-top: 0.15rem;
+}
+
+.svg-chart-wrapper {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border-light);
+  padding: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.svg-chart-wrapper svg {
+  width: 100%;
+  height: auto;
+  max-height: 290px;
+  display: block;
+}
+
+.exhibit-caption {
+  font-size: 0.8rem;
+  color: var(--mck-text-secondary);
+  background: #FFFFFF;
+  border-left: 3px solid var(--mck-cyan);
+  padding: 0.55rem 0.75rem;
+  line-height: 1.5;
+}
+
+/* McKinsey Consulting Table Styling */
+.mck-table-wrap {
+  overflow-x: auto;
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+}
+
+.mck-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.mck-table thead th {
+  background: var(--mck-navy);
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.62rem 0.75rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.mck-table thead th:last-child {
+  border-right: none;
+}
+
+.mck-table tbody td {
+  padding: 0.58rem 0.75rem;
+  border-bottom: 1px solid var(--mck-border-light);
+  color: var(--mck-text-secondary);
+  vertical-align: top;
+  line-height: 1.48;
+}
+
+.mck-table tbody tr:nth-child(even) {
+  background: var(--mck-surface-alt);
+}
+
+.mck-table tbody tr:hover {
+  background: var(--mck-blue-soft);
+}
+
+.mck-table td strong {
+  color: var(--mck-navy);
+}
+
+/* Badges & Pills inside Tables/Slides */
+.mck-pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.14rem 0.48rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pill-navy { background: var(--mck-navy); color: #FFFFFF; }
+.pill-blue { background: var(--mck-blue-soft); color: var(--mck-blue); border: 1px solid #BFDBFE; }
+.pill-cyan { background: var(--mck-cyan-soft); color: #0369A1; border: 1px solid #BAE6FD; }
+.pill-green { background: var(--mck-green-soft); color: var(--mck-green); border: 1px solid #A7F3D0; }
+.pill-amber { background: var(--mck-amber-soft); color: var(--mck-amber); border: 1px solid #FDE68A; }
+.pill-red { background: var(--mck-red-soft); color: var(--mck-red); border: 1px solid #FECACA; }
+
+/* Slide Bottom Bar: McKinsey Key Takeaway & Source Footer */
+.slide-footer {
+  background: var(--mck-navy);
+  color: #FFFFFF;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--mck-blue);
+}
+
+.slide-takeaway {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.slide-takeaway strong {
+  color: var(--mck-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.4rem;
+}
+
+.slide-source {
+  font-size: 0.72rem;
+  color: #94A3B8;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Portal Diagnostic Tool & Cards
+   ========================================================================== */
+.diag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.diag-card {
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+  border-top: 3px solid var(--mck-navy);
+  padding: 1rem 1.15rem;
+}
+
+.diag-q-num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--mck-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.diag-q-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--mck-navy);
+  margin: 0.3rem 0 0.65rem;
+}
+
+.diag-select {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--mck-border);
+  font-size: 0.83rem;
+  color: var(--mck-text);
+  background: var(--mck-surface-alt);
+  font-family: var(--font-sans);
+}
+
+.diag-output {
+  background: var(--mck-navy);
+  color: #FFFFFF;
+  border-left: 5px solid var(--mck-cyan);
+  padding: 1.25rem 1.5rem;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.book-card {
+  background: #FFFFFF;
+  border: 1px solid var(--mck-border);
+  border-top: 4px solid var(--mck-navy);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-slide);
+}
+
+.book-card.active-book {
+  border-top-color: var(--mck-blue);
+}
+
+.site-footer {
+  background: var(--mck-navy-dark);
+  color: #94A3B8;
+  padding: 2.5rem 2rem;
+  font-size: 0.82rem;
+  border-top: 3px solid var(--mck-blue);
+}
+
+@media print {
+  .top-nav, .deck-toolbar, .slide-index-sidebar {
+    display: none !important;
+  }
+  .deck-workspace {
+    grid-template-columns: 1fr !important;
+  }
+  .mck-slide {
+    display: flex !important;
+    page-break-after: always;
+    box-shadow: none;
+  }
+}
